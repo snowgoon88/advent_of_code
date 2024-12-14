@@ -1,0 +1,76 @@
+cabal-version:      2.4
+name:               Advent24
+version:            0.1.0.0
+
+-- A short (one-line) description of the package.
+-- synopsis:
+
+-- A longer description of the package.
+-- description:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+
+-- The license under which the package is released.
+-- license:
+author:             Alain Dutech
+maintainer:         alain.dutech@loria.fr
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+common shared-properties
+    hs-source-dirs:   app, src
+    default-language: Haskell2010
+    build-depends:    base ^>=4.16.4.0,
+        MissingH ^>= 1.6,
+        containers ^>= 0.6,
+        massiv ^>= 1.0,
+        time ^>= 1.12,
+        mtl ^>= 2.2.2
+
+    other-modules:
+        MyParser,
+        MyGrid
+
+executable Advent23
+    import: shared-properties
+    main-is:          Main.hs
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+    --     MyParser
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:    base ^>=4.16.4.0
+    -- hs-source-dirs:   app, src
+    -- default-language: Haskell2010
+executable Advent24
+    import: shared-properties
+    main-is:          Main24.hs
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+    --     MyParser
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:    base ^>=4.16.4.0
+    -- hs-source-dirs:   app, src
+    -- default-language: Haskell2010
+executable Advent15
+    import: shared-properties
+    main-is:          Main15.hs
+
+    -- Modules included in this executable, other than Main.
+    -- other-modules:
+    --     MyParser
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:    base ^>=4.16.4.0
+    -- hs-source-dirs:   app, src
+    -- default-language: Haskell2010

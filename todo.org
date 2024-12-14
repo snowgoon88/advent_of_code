@@ -1,0 +1,58 @@
+#+Title: What to do on Advent Calendars ?
+
+* Library
+** MyParser
+parseLabelID :: String -> String -> Parser Int
+parseList :: ListInfo -> String -> ListInfo *** in reverse order ***
+parseLabelList :: String -> String -> ListInfo *** in reverse order ***
+* Info : all soluces
+https://www.reddit.com/r/adventofcode/comments/18h4ign/2023_day_12_part_2_how_to_approach_part_2/
+https://github.com/jimflood/aoc2023/blob/main/src/Day12.hs
+* TODO Advent23 : day 20
+https://adventofcode.com/2023/day/13
+https://hoogle.haskell.org/
+* TODO Haskel plot 2D fig (lines, dots)
+* Solved cases
+** 2015
+advent15_01: parenthesis like lisp go up, down. parse, zip
+advent15_02: volume, surface of boxes, map, sum
+advent15_03: path, parallel path in 4 direction
+advent15_04: MD5, leading 0
+advent15_05: parse String for doubles, triplets, etc
+
+** 2023
+advent23_01: parser numbers as digit or letters ("nine") in lines,
+advent23_02: draw colored balls from bag, possible games, minimum number of balls
+advent23_03: 2Dmap as lists, search numbers neigbors of symbols
+advent23_04: cards with winning number and number drawn, can earn new cards, MyParser
+advent23_05: mapping of numbers where mapping is given as ranges to ranges, MyParser
+advent23_06: intervale computation, acceleration to get race time, MyParser
+advent23_07: sort "poker" hands, with Joker, Data.List
+advent23_08: list of graph node with label, synchronization of parallel cycles, prime diviser decomposition, Data.Map
+advent23_09: recursive difference of lines of number to predict next element
+advent23_10: 2D array using Data.Massiv.Array, Ix2 coord, follow path for cycles, inside area
+advent23_11: hamming2D, map as list of list, zipped with coord
+advent23_12: '?' pattern, combination, Data.Map, merging tree traversal cursor
+advent23_13: find symetries in 2d grid, use Data.Massiv.Array.transpose, uncurry
+advent23_14: twist plateform with stones, read grid2D, cache result Data.Map, find repeat cycle, Time
+advent23_15: hash, Map, foldlWithKey
+advent23_16: 2D grid reading, flow, path, Map to detect already used, chunks from MyParser
+advent23_17: 2D grid readin, A*, Map, (pas optimal)
+advent23_18: dir -> path, interior of Path.
+advent23_19: chain Inf/Sup rules, intervale computation, trace
+advent23_20: finite state machine, petri net, least common multiplier (lcm/ppmc), essai State
+
+** 2024
+advent24_01: distance between list, sort, group, Map
+advent24_02: difference intra list, any, all, remove element from list
+advent24_03: parse char by char for Mul, do, do not.
+advent24_04: look for Word in 2D char grid, Map, Dir
+advent24_05: sort, reorder lists succ/prec, repare liste right order, debug, detect/group empty lines
+advent24_06: ricochet robot, put obstacle, grid 2D,
+advent24_07: breadfirst search, op mul plus concat
+advent24_08: read 2D grid elements as (Char, (Pos)) (zip), compute Vec from Pos, Set, antennae resonnance
+advent24_09: defragment disk, block by block or using Block. Map, catMaybe :: filterFromJust
+advent24_10: all paths between 0 and 9. modify Map using sublist of keys
+advent24_11: divide stones, count Freq. sort, groupBy.
+advent24_12: colorize regions 2D, find frontier (chaining corners), SHOULD Change DIR
+advent24_13: machine with buttonA, buttonB. solve linear equation, group between empty lines
