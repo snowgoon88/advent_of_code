@@ -56,3 +56,6 @@ advent24_10: all paths between 0 and 9. modify Map using sublist of keys
 advent24_11: divide stones, count Freq. sort, groupBy.
 advent24_12: colorize regions 2D, find frontier (chaining corners), SHOULD Change DIR
 advent24_13: machine with buttonA, buttonB. solve linear equation, group between empty lines
+advent24_14: particule in toric world, mapToStr, criteria (minimise dist to centerline) pour avoir un "christmas tree"
+advent24_15: push box size 1 ou 2, grid2D, niceWorld mapToStr, Dir is Int
+advent24_16: short path, a*, astar, allpath (breadfirst), extract path from Map (Vivi -15)

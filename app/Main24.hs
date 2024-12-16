@@ -8,13 +8,13 @@ module Main where
 -- import qualified MyParser as MP
 -- import MyParser ( GridMap, readGrid, chunks )
 -- import MyGrid (Pos, Size, DirVec, GridMapCore, readGrid, addDir, isValidPos, chunks)
--- import Data.List ( sort, groupBy, group, sortOn ) -- sortOn, groupBy, find, group, sort, sortBy )
+-- import Data.List ( find, sortOn, groupBy ) -- sortOn, groupBy, find, group, sort, sortBy _)
 -- import Data.Tuple ( swap )
 -- import Data.String.Utils ( split, join) --, replace, split )
 -- import qualified Data.Map.Strict as Map
 -- import Data.Char ( digitToInt, isDigit )
 -- import qualified Data.Massiv.Array as A
--- import Data.Maybe ( fromJust, catMaybes, isNothing )
+-- import Data.Maybe ( catMaybes, fromMaybe ) -- fromJust, fromMaybe, catMaybes, isNothing )
 -- import Control.Monad ( fold )
 -- import qualified Data.Map as Map
 -- import qualified Data.Set as Set
@@ -34,10 +34,10 @@ module Main where
 main :: IO ()
 main = do
   putStrLn "********************************************************************************"
-  putStrLn "** Advent 2024 - Day 16 Part - & -                                          **"
+  putStrLn "** Advent 2024 - Day 17 Part - & -                                          **"
   putStrLn "********************************************************************************"
-  -- content <- readFile "Input24/input16.txt"
-  content <- readFile "Input24/test16_1.txt"
+  -- content <- readFile "Input24/input17.txt"
+  content <- readFile "Input24/test17_1.txt"
 
   -- putStrLn $ "Answer 1> " ++ show pRes
 
@@ -52,4 +52,3 @@ main = do
 -- *****************************************************************************
 -- ********************************************************************** Part 2
 -- *****************************************************************************
-
