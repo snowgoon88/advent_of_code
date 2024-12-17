@@ -24,6 +24,7 @@ module Main where
 -- import Debug.Trace ( trace )
 -- import Numeric ( readHex )
 -- import Control.Monad.State
+-- import qualified Data.Bits as Bits
 -- *********************************************************************************** DEBUG
 -- import Debug.Trace ( trace ) -- trace :: String > a -> a
 -- traceThis :: (Show a) => a -> a
@@ -31,17 +32,18 @@ module Main where
 -- -- used as (1+2) `debug` "adding"'
 -- debug = flip trace
 
+
 main :: IO ()
 main = do
   putStrLn "********************************************************************************"
-  putStrLn "** Advent 2024 - Day 17 Part - & -                                          **"
+  putStrLn "** Advent 2024 - Day 18 Part - & -                                          **"
   putStrLn "********************************************************************************"
-  -- content <- readFile "Input24/input17.txt"
-  content <- readFile "Input24/test17_1.txt"
+  -- content <- readFile "Input24/input18.txt"
+  -- content <- readFile "Input24/test18_1.txt"
 
-  -- putStrLn $ "Answer 1> " ++ show pRes
+  putStrLn $ "Answer 1> " ++ show pRes
 
-  -- putStrLn $ "Answer 2> " ++ show cRes
+  putStrLn $ "Answer 2> " ++ show cRes
 
   putStrLn "END"
 
@@ -52,3 +54,4 @@ main = do
 -- *****************************************************************************
 -- ********************************************************************** Part 2
 -- *****************************************************************************
+
