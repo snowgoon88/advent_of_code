@@ -14,8 +14,8 @@ module Main where
 -- import qualified Data.Map.Strict as Map
 -- import Data.Char ( digitToInt, isDigit )
 -- import qualified Data.Massiv.Array as A
--- import Data.Maybe ( catMaybes, fromMaybe ) -- fromJust, fromMaybe, catMaybes, isNothing )
 -- import Control.Monad ( fold )
+-- import Data.Maybe ( catMaybes, fromMaybe ) -- fromJust, fromMaybe, catMaybes, isNothing )
 -- import qualified Data.Map as Map
 -- import qualified Data.Set as Set
 -- import Data.List ( delete, sortOn ) -- delete, sortOn
@@ -36,14 +36,14 @@ module Main where
 main :: IO ()
 main = do
   putStrLn "********************************************************************************"
-  putStrLn "** Advent 2024 - Day 18 Part - & -                                          **"
+  putStrLn "** Advent 2024 - Day 19 Part - & -                                          **"
   putStrLn "********************************************************************************"
-  -- content <- readFile "Input24/input18.txt"
-  -- content <- readFile "Input24/test18_1.txt"
+  -- content <- readFile "Input24/input19.txt"
+  content <- readFile "Input24/test19_1.txt"
 
-  putStrLn $ "Answer 1> " ++ show pRes
+  -- putStrLn $ "Answer 1> " ++ show pRes
 
-  putStrLn $ "Answer 2> " ++ show cRes
+  -- putStrLn $ "Answer 2> " ++ show cRes
 
   putStrLn "END"
 

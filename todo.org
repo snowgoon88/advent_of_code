@@ -59,4 +59,4 @@ advent24_13: machine with buttonA, buttonB. solve linear equation, group between
 advent24_14: particule in toric world, mapToStr, criteria (minimise dist to centerline) pour avoir un "christmas tree"
 advent24_15: push box size 1 ou 2, grid2D, niceWorld mapToStr, Dir is Int
 advent24_16: short path, a*, astar, allpath (breadfirst), extract path from Map
-advent24_17: run program microcode => CRC32, find input to get an invariant program (search). not nice, should use "loop"
+advent24_17: run program microcode => CRC8 ??, find input to get an invariant program (search). not nice, should use "loop"
