@@ -10,7 +10,7 @@ module Main where
 -- import MyGrid (Pos, Size, DirVec, GridMapCore, readGrid, addDir, isValidPos, chunks)
 -- import Data.List ( find, sortOn, groupBy ) -- sortOn, groupBy, find, group, sort, sortBy _)
 -- import Data.Tuple ( swap )
--- import Data.String.Utils ( split, join) --, replace, split )
+-- import Data.String.Utils ( split, join, startswith) --, startswith, join, replace, split )
 -- import qualified Data.Map.Strict as Map
 -- import Data.Char ( digitToInt, isDigit )
 -- import qualified Data.Massiv.Array as A
@@ -36,10 +36,10 @@ module Main where
 main :: IO ()
 main = do
   putStrLn "********************************************************************************"
-  putStrLn "** Advent 2024 - Day 19 Part - & -                                          **"
+  putStrLn "** Advent 2024 - Day 20 Part - & -                                          **"
   putStrLn "********************************************************************************"
-  -- content <- readFile "Input24/input19.txt"
-  content <- readFile "Input24/test19_1.txt"
+  -- content <- readFile "Input24/input20.txt"
+  content <- readFile "Input24/test20_1.txt"
 
   -- putStrLn $ "Answer 1> " ++ show pRes
 
@@ -50,6 +50,7 @@ main = do
 -- *****************************************************************************
 -- ********************************************************************** Part 1
 -- *****************************************************************************
+
 
 -- *****************************************************************************
 -- ********************************************************************** Part 2
