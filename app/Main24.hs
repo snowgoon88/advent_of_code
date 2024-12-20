@@ -7,9 +7,7 @@ module Main where
 
 -- import qualified MyParser as MP
 -- import MyParser ( GridMap, readGrid, chunks )
--- import MyGrid (Pos, Size, DirVec, GridMapCore, readGrid, addDir, isValidPos, chunks)
--- import Data.List ( find, sortOn, groupBy ) -- sortOn, groupBy, find, group, sort, sortBy _)
--- import Data.Tuple ( swap )
+-- import MyGrid (Pos, Size, DirVec, GridMapCore, readGrid, addDir, isValidPos, chunks, getValMap)
 -- import Data.String.Utils ( split, join, startswith) --, startswith, join, replace, split )
 -- import qualified Data.Map.Strict as Map
 -- import Data.Char ( digitToInt, isDigit )
@@ -18,7 +16,7 @@ module Main where
 -- import Data.Maybe ( catMaybes, fromMaybe ) -- fromJust, fromMaybe, catMaybes, isNothing )
 -- import qualified Data.Map as Map
 -- import qualified Data.Set as Set
--- import Data.List ( delete, sortOn ) -- delete, sortOn
+-- import Data.List ( find, delete, sortOn, groupBy ) -- delete, sortOn
 -- import Data.Time.Clock.POSIX ( getPOSIXTime )
 -- import Data.Char ( ord )
 -- import Debug.Trace ( trace )
@@ -36,10 +34,10 @@ module Main where
 main :: IO ()
 main = do
   putStrLn "********************************************************************************"
-  putStrLn "** Advent 2024 - Day 20 Part - & -                                          **"
+  putStrLn "** Advent 2024 - Day 21 Part - & -                                          **"
   putStrLn "********************************************************************************"
-  -- content <- readFile "Input24/input20.txt"
-  content <- readFile "Input24/test20_1.txt"
+  -- content <- readFile "Input24/input21.txt"
+  content <- readFile "Input24/test21_1.txt"
 
   -- putStrLn $ "Answer 1> " ++ show pRes
 
@@ -50,8 +48,6 @@ main = do
 -- *****************************************************************************
 -- ********************************************************************** Part 1
 -- *****************************************************************************
-
-
 -- *****************************************************************************
 -- ********************************************************************** Part 2
 -- *****************************************************************************
