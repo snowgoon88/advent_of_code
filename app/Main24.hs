@@ -8,6 +8,8 @@ module Main where
 -- import qualified MyParser as MP
 -- import MyParser ( GridMap, readGrid, chunks )
 -- import MyGrid (Pos, Size, DirVec, GridMapCore, readGrid, addDir, isValidPos, chunks, getValMap)
+-- import qualified MyCache as MC
+
 -- import Data.String.Utils ( split, join, startswith) --, startswith, join, replace, split )
 -- import qualified Data.Map.Strict as Map
 -- import Data.Char ( digitToInt, isDigit )
