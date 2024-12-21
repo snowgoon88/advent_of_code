@@ -63,3 +63,4 @@ advent24_17: run program microcode => CRC8 ??, find input to get an invariant pr
 advent24_18: path through 2D map (aStar), then remap when obstacles are added
 advent24_19: decompose long strings into subpatterns, depthfirstSearch, kind of breadhFirst search
 advent24_20: only one possible path in labyrinthe2D, then can "fly over obst" for nb steps. (add kind of breadthFist but not needed), extract path,
+advent24_21: n robots pushing buttons for code (numpad and arrowpad), cached version of Dynamic Programming and handcrafted optim !!!
