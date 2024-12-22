@@ -40,6 +40,10 @@ executable TestCache
     import: shared-properties
     main-is:    TestCache.hs
 
+executable TestStateMemo
+    import: shared-properties
+    main-is:    TestStateMemo.hs
+
 executable Advent23
     import: shared-properties
     main-is:          Main.hs
