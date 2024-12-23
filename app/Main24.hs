@@ -18,7 +18,7 @@ module Main where
 -- import Data.Maybe ( catMaybes, fromMaybe ) -- fromJust, fromMaybe, catMaybes, isNothing )
 -- import qualified Data.Map as Map
 -- import qualified Data.Set as Set
--- import Data.List ( sort, group, find, delete, sortOn, groupBy ) -- delete, sortOn
+-- import Data.List ( find, sortOn ) -- sort, group, find, delete, sortOn, groupBy ) -- delete, sortOn
 -- import Data.Time.Clock.POSIX ( getPOSIXTime )
 -- import Data.Char ( ord )
 -- import Debug.Trace ( trace )
@@ -36,10 +36,10 @@ module Main where
 main :: IO ()
 main = do
   putStrLn "********************************************************************************"
-  putStrLn "** Advent 2024 - Day 23 Part - & -                                          **"
+  putStrLn "** Advent 2024 - Day 24 Part 1 & 2                                          **"
   putStrLn "********************************************************************************"
-  -- content <- readFile "Input24/input23.txt"
-  content <- readFile "Input24/test23_1.txt"
+  -- content <- readFile "Input24/input24.txt"
+  content <- readFile "Input24/test24_1.txt"
 
   -- putStrLn $ "Answer 1> " ++ show pRes
 
@@ -54,4 +54,3 @@ main = do
 -- *****************************************************************************
 -- ********************************************************************** Part 2
 -- *****************************************************************************
-
