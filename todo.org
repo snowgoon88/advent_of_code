@@ -65,4 +65,4 @@ advent24_19: decompose long strings into subpatterns, depthfirstSearch, kind of 
 advent24_20: only one possible path in labyrinthe2D, then can "fly over obst" for nb steps. (add kind of breadthFist but not needed), extract path,
 advent24_21: n robots pushing buttons for code (numpad and arrowpad), cached version of Dynamic Programming and handcrafted optim !!! => TODO avec State Monad !!!!
 advent24_22: pseudo random generator, memoazing/caching results, looking for patterns
-advent24_23: subgraph and maximum clique (fully connected subgraph), Map of Set
+advent24_23: subgraph and maximum clique (fully connected subgraph), Map of Set => Bron-Kerbosh algo
