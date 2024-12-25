@@ -66,3 +66,5 @@ advent24_20: only one possible path in labyrinthe2D, then can "fly over obst" fo
 advent24_21: n robots pushing buttons for code (numpad and arrowpad), cached version of Dynamic Programming and handcrafted optim !!! => TODO avec State Monad !!!!
 advent24_22: pseudo random generator, memoazing/caching results, looking for patterns
 advent24_23: subgraph and maximum clique (fully connected subgraph), Map of Set => Bron-Kerbosh algo
+advent24_24: simulate AND, XOR and OR in graph of Gates, repare to get additioner (using Graphviz and list of digit defectueux)
+advent24_25 : locks and keys as 7x5 grid2D, fit by comparing columns.
