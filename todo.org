@@ -19,6 +19,8 @@ advent15_02: volume, surface of boxes, map, sum
 advent15_03: path, parallel path in 4 direction
 advent15_04: MD5, leading 0
 advent15_05: parse String for doubles, triplets, etc
+** 2020
+https://blog.jle.im/entry/advent-of-code-2020.html
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,

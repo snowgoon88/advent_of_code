@@ -4,7 +4,7 @@ yead_day=""
 arg_interact="0"
 arg_nobuild="0"
 
-cmd="cabal new-" # run ou repl
+cmd="cabal " # run ou repl
 
 while true ; do
     case "$1" in
@@ -46,10 +46,12 @@ if test -f $advent_name; then
     echo "ln -s ../"$advent_name" "$link_name
     ln -s "../"$advent_name $link_name
     if [ "$arg_nobuild" == "0" ]; then
-        echo "cabal new-clean"
-        cabal new-clean
-        echo "cabal new-build $link_name"
-        cabal new-build $link_name
+        echo "cabal clean"
+        cabal clean
+        # echo "cabal build $link_name"
+        # cabal build $link_name
+        echo "cabal build "$target_name
+        cabal build $target_name
     fi
     echo $cmd
     $cmd
