@@ -14,6 +14,7 @@ while true ; do
         arg_nobuild="1"; shift 1;;
 	-h|--help)
 	    echo "usage $0 [-i/--interact] [-n/--no_build] yy_dd"
+        echo "(works by setting up a link from src/advent_yy_dd.hs to app/Main.hs)"
 	    exit;;
 	*)
         # need one file name
