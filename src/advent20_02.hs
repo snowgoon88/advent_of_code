@@ -107,6 +107,7 @@ data Policy = P
     , pChar :: Char
     , pPass :: String
     }
+  deriving Show
 
 parsePolicy :: String -> Maybe Policy
 parsePolicy str = do
