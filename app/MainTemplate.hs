@@ -15,7 +15,10 @@ module Main where
 -- import Data.Char ( digitToInt, isDigit )
 -- import qualified Data.Massiv.Array as A
 -- import Control.Monad ( fold )
--- import Data.Maybe ( catMaybes, fromMaybe ) -- fromJust, fromMaybe, catMaybes, isNothing )
+-- fromJust, fromMaybe, catMaybes, isNothing, listToMaybe
+-- import Data.Maybe ( catMaybes, fromMaybe )
+-- Data.IntSet: fromList, toList, split
+-- import qualified Dat.IntSet as IS
 -- import qualified Data.Map as Map
 -- import qualified Data.Set as Set
 -- import Data.List ( find, sortOn, groupBy ) -- sort, group, find, delete, sortOn, groupBy ) -- delete, sortOn
@@ -36,10 +39,10 @@ module Main where
 main :: IO ()
 main = do
   putStrLn "********************************************************************************"
-  putStrLn "** Advent 2024 - Day 25 Part - & -                                          **"
+  putStrLn "** Advent 2020 - Day xx Part - & -                                          **"
   putStrLn "********************************************************************************"
-  -- content <- readFile "Input24/input25.txt"
-  -- content <- readFile "Input24/test25_1.txt"
+  -- content <- readFile "Input20/input25.txt"
+  -- content <- readFile "Input20/test25_1.txt"
 
   -- putStrLn $ "Answer 1> " ++ show pRes
 

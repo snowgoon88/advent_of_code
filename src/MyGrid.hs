@@ -15,13 +15,13 @@ type GridMapCore a = (Size, PosMapCore a)
 -- readSize : give (rmax, cmax) of 2D grid
 -- *****************************************************************************
 readSize :: [String] -> Size
-readSize lines = (length lines, length (head lines))
+readSize linesG = (length linesG, length (head linesG))
 
 -- *****************************************************************************
 -- readGrid : parse lines into ((nbRow, nbCol), Map (Int, Int) Char)
 -- *****************************************************************************
 readGrid :: [String] -> GridMapCore Char
-readGrid lines = ((length lines, length (head lines)), Map.fromList [((row, col), c) | (row, line) <- zip [0..] lines, (col, c) <- zip [0..] line])
+readGrid linesG = ((length linesG, length (head linesG)), Map.fromList [((row, col), c) | (row, line) <- zip [0..] linesG, (col, c) <- zip [0..] line])
 
 
 -- *****************************************************************************
