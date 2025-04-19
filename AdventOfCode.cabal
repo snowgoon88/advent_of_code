@@ -29,7 +29,8 @@ common shared-properties
     other-modules:
         MyCache,
         MyParser,
-        MyGrid
+        MyGrid,
+        MyUtils
 
 executable AdventOfCode
     import:           warnings ,
