@@ -24,6 +24,7 @@ https://blog.jle.im/entry/advent-of-code-2020.html
 advent20_01: find n numbers in list that sums to n (knakpack)
 advent20_02: parse 'int-int letter: string' and check some constraints on passwd
 advent20_03: count trees when traverse down right (smart read grid)
+advent20_04: parse and validate fields for passport (smart Refined, Barbies, Parser)
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,

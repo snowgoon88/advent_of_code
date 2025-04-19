@@ -9,15 +9,16 @@ module Main where
 -- import MyParser ( GridMap, readGrid, chunks )
 -- import MyGrid (Pos, Size, DirVec, GridMapCore, readGrid, addDir, isValidPos, chunks, getValMap)
 -- import qualified MyCache as MC
+-- ****** MyUtils: countTrue, groupLines
 
--- import Data.String.Utils ( split, join, startswith) --, startswith, join, replace, split )
+-- ****** Data.String.Utils ** split, join, startswith, replace
 -- import qualified Data.Map.Strict as Map
--- import Data.Char ( digitToInt, isDigit )
+-- ****** Data.Char: digitToInt, isDigit, isHexDigit, toLower
 -- import qualified Data.Massiv.Array as A
 -- import Control.Monad ( fold )
--- fromJust, fromMaybe, catMaybes, isNothing, listToMaybe
+-- ****** Data.Maybe: fromJust, fromMaybe, catMaybes, isNothing, listToMaybe
 -- import Data.Maybe ( catMaybes, fromMaybe )
--- Data.IntSet: fromList, toList, split
+-- ****** Data.IntSet: fromList, toList, split
 -- import qualified Dat.IntSet as IS
 -- import qualified Data.Map as Map
 -- import qualified Data.Set as Set
