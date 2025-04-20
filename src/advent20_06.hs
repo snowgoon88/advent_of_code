@@ -21,9 +21,9 @@ module Main where
 -- ****** Data.IntSet: fromList, toList, split
 -- import qualified Dat.IntSet as IS
 -- import qualified Data.Map as Map
--- import qualified Data.Set as Set
+import qualified Data.Set as Set
 -- ****** Data.List: find, sortOn, groupBy, sort, group, delete, (\\), foldl'
--- ****** Data.List.Extra: splitOn
+import Data.List.Extra (splitOn)
 -- import Data.Time.Clock.POSIX ( getPOSIXTime )
 -- import Data.Char ( ord )
 -- import Debug.Trace ( trace )
@@ -41,14 +41,22 @@ module Main where
 main :: IO ()
 main = do
   putStrLn "********************************************************************************"
-  putStrLn "** Advent 2020 - Day xx Part - & -                                          **"
+  putStrLn "** Advent 2020 - Day 06 Part - & -                                          **"
   putStrLn "********************************************************************************"
-  -- content <- readFile "Input20/inputxx.txt"
-  -- content <- readFile "Input20/testxx_1.txt"
+  content <- readFile "Input20/input06.txt"
+  -- content <- readFile "Input20/test06_1.txt"
 
-  -- putStrLn $ "Answer 1> " ++ show pRes
+  let groups = splitOn "\n\n" content
+  -- putStrLn $ "groups=" ++ show groups
 
-  -- putStrLn $ "Answer 2> " ++ show cRes
+  let pRes = sum (map answers groups)
+  putStrLn $ "Answer 1> " ++ show pRes
+
+  let answ2 = map answerAll groups
+  -- putStrLn $ "answ2=" ++ show answ2
+
+  let cRes = sum answ2
+  putStrLn $ "Answer 2> " ++ show cRes
 
   putStrLn "END"
 
@@ -56,7 +64,17 @@ main = do
 -- ********************************************************************** Part 1
 -- *****************************************************************************
 
+-- make a set, remove '\n' and count
+answers :: String -> Int
+answers group = Set.size (Set.delete '\n' $ Set.fromList group)
+
 -- *****************************************************************************
 -- ********************************************************************** Part 2
 -- *****************************************************************************
+allAnswerSet :: Set.Set Char
+allAnswerSet = Set.fromList ['a'..'z']
 
+answerAll :: String -> Int
+answerAll groups = Set.size (foldl Set.intersection
+                             allAnswerSet
+                             (map Set.fromList (lines groups)))
