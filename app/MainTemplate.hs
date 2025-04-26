@@ -11,7 +11,7 @@ module Main where
 -- import qualified MyCache as MC
 -- ****** MyUtils: countTrue, groupLines
 
--- ****** Data.String.Utils ** split, join, startswith, replace
+-- ****** Data.String.Utils ** split, join, startswith, replace, endsWith
 -- import qualified Data.Map.Strict as Map
 -- ****** Data.Char: digitToInt, isDigit, isHexDigit, toLower
 -- import qualified Data.Massiv.Array as A
