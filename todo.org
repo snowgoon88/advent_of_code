@@ -30,6 +30,7 @@ advent20_06: union and intersections of Set of Char (smart NE.nonEmpty, fmap.fma
 advent20_07: bags inside bags, use Map and inverse the Map to find descendant or add values
 advent20_07smart: smart use of fmap (and foldMapWithKey and toList) to invert, compute descendants or add values through Map and Set
 advent20_08: virtual machine (adress, accumulator) using State. SMART: no State, but nice iterateMaybe
+advent20_09: compute cumsum over sliding windows
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,

@@ -41,14 +41,18 @@ module Main where
 main :: IO ()
 main = do
   putStrLn "********************************************************************************"
-  putStrLn "** Advent 2020 - Day xx Part - & -                                          **"
+  putStrLn "** Advent 2020 - Day 09 Part - & -                                          **"
   putStrLn "********************************************************************************"
-  -- content <- readFile "Input20/inputxx.txt"
-  -- content <- readFile "Input20/testxx_1.txt"
+  content <- readFile "Input20/input09.txt"
+  -- content <- readFile "Input20/test09_1.txt"
 
-  -- putStrLn $ "Answer 1> " ++ show pRes
+  let serie = map read (lines content) :: [Int]
 
-  -- putStrLn $ "Answer 2> " ++ show cRes
+  let pRes = checkCode 25 serie
+  putStrLn $ "Answer 1> " ++ show pRes
+
+  let cRes = findCumsum pRes serie
+  putStrLn $ "Answer 2> " ++ show cRes
 
   putStrLn "END"
 
@@ -56,7 +60,53 @@ main = do
 -- ********************************************************************** Part 1
 -- *****************************************************************************
 
+xmasCode :: Int -> [Int] -> Maybe Int
+xmasCode preambule nums = if any (checkComplementary prev code) prev
+  then Just code
+  else Nothing
+  where
+    prev = take preambule nums
+    code = head (drop preambule nums)
+    checkComplementary :: [Int] -> Int -> Int -> Bool
+    checkComplementary candidates total c1 = (total - c1) /= c1 &&
+      (elem (total - c1) candidates)
+
+checkCode :: Int -> [Int] -> Int
+checkCode preambule nums = case xmasCode preambule nums of
+  Nothing -> head (drop preambule nums)
+  Just _  -> checkCode preambule $ tail nums
+
 -- *****************************************************************************
 -- ********************************************************************** Part 2
 -- *****************************************************************************
+headMaybe :: [a] -> Maybe a
+headMaybe x = if length x > 0
+  then Just $ head x
+  else Nothing
 
+doCumSum :: [Int] -> [(Int, Int, Int)]
+doCumSum (x:y:ys) = foldl op [(x+y, min x y, max x y)] ys
+  where
+    op :: [(Int, Int, Int)] -> Int -> [(Int, Int, Int)]
+    op acc n = (csum+n, min minNum n, max maxNum n) : acc
+      where
+        (csum, minNum, maxNum) = head acc
+doCumSum _ = []
+
+cumsum :: Int -> [Int] -> Maybe (Int, Int, Int)
+cumsum _ [] = Nothing
+cumsum _ [_] = Nothing
+cumsum total (x:y:ys) = headMaybe $ dropWhile (\(cs,_,_) -> cs > total)
+  (foldl op [(x+y, min x y, max x y)] ys)
+  where
+    op :: [(Int, Int, Int)] -> Int -> [(Int, Int, Int)]
+    op acc n = (csum+n, min minNum n, max maxNum n) : acc
+      where
+        (csum, minNum, maxNum) = head acc
+
+findCumsum :: Int -> [Int] -> Maybe (Int, Int, Int)
+findCumsum goal nums = case cumsum goal nums of
+  Nothing -> Nothing
+  Just (csum, minN, maxN) -> if csum == goal
+    then Just (minN + maxN, minN, maxN)
+    else findCumsum goal $ tail nums
