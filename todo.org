@@ -31,6 +31,7 @@ advent20_07: bags inside bags, use Map and inverse the Map to find descendant or
 advent20_07smart: smart use of fmap (and foldMapWithKey and toList) to invert, compute descendants or add values through Map and Set
 advent20_08: virtual machine (adress, accumulator) using State. SMART: no State, but nice iterateMaybe
 advent20_09: compute cumsum over sliding windows
+advent20_10: sort sequence and compute combination under constraints (chain of adaptor). Smart is using kind of memoazind (DynProg ?) but no need in fact
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,
