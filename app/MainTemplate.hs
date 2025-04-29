@@ -7,7 +7,8 @@ module Main where
 
 -- import qualified MyParser as MP
 -- import MyParser ( GridMap, readGrid, chunks )
--- import MyGrid (Pos, Size, DirVec, GridMapCore, readGrid, addDir, isValidPos, chunks, getValMap)
+-- import MyGrid (Pos, Size, DirVec, GridMapCore,
+--                readGrid, addDir, isValidPos, chunks, getValMap, allDir)
 -- import qualified MyCache as MC
 -- ****** MyUtils: countTrue, groupLines
 
@@ -16,7 +17,7 @@ module Main where
 -- ****** Data.Char: digitToInt, isDigit, isHexDigit, toLower
 -- import qualified Data.Massiv.Array as A
 -- import Control.Monad ( fold )
--- ****** Data.Maybe: fromJust, fromMaybe, catMaybes, isNothing, listToMaybe
+-- ****** Data.Maybe: fromJust, fromMaybe, catMaybes, isNothing, listToMaybe, mapMaybe
 -- import Data.Maybe ( catMaybes, fromMaybe )
 -- ****** Data.IntSet: fromList, toList, split
 -- import qualified Dat.IntSet as IS

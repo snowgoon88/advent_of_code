@@ -46,6 +46,11 @@ chunks :: Int -> String -> String
 chunks _ [] = []
 chunks n xs = ys ++ ('\n' : chunks n zs)
   where (ys, zs) = splitAt n xs
+-- *****************************************************************************
+-- showGrid : display a GridCore a
+-- *****************************************************************************
+showGrid :: Show a => GridMapCore a
+showGrid (size, gmap) = chunks (snd size) $ map (show . snd) (Map.toList gmap)
 
 -- generate all DirVec pointing out of (0, 0)
 allDir :: [DirVec]
