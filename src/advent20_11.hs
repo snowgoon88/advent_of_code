@@ -5,7 +5,7 @@ module Main where
 -- import qualified MyParser as MP
 -- import MyParser ( GridMap, readGrid, chunks )
 import MyGrid (Pos, Size, DirVec, GridMapCore,
-               readGrid, addDir, isValidPos, chunks, getValMap, allDir)
+               readGrid, addDir, isValidPos, chunks, showGrid, getValMap, allDir)
 -- import qualified MyCache as MC
 -- ****** MyUtils: countTrue, groupLines
 
@@ -42,11 +42,12 @@ main = do
   putStrLn "********************************************************************************"
   putStrLn "** Advent 2020 - Day 11 Part - & -                                          **"
   putStrLn "********************************************************************************"
-  content <- readFile "Input20/input11.txt"
-  -- content <- readFile "Input20/test11_1.txt"
+  -- content <- readFile "Input20/input11.txt"
+  content <- readFile "Input20/test11_1.txt"
 
   let gMap = readGrid (lines content) :: GridMap
   -- putStrLn $ mapToStr gMap
+  putStrLn $ showGrid gMap
 
   let seatPos = seats gMap
   -- putStrLn $ "seats=" ++ show seatPos

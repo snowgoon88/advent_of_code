@@ -39,8 +39,17 @@ else
     cmd=$cmd"run "$target_name
 fi
 
+if test -f $link_name; then
+    if test -L $link_name; then
+        echo "Removing link " $link_name;
+        rm $link_name
+    else
+        echo $link_name " is not a LINK. Stop"
+        exit;
+    fi
+fi
 if test -f $advent_name; then
-    echo $advent_name" EXISTS"
+    echo "link "$advent_name" EXISTS"
     echo "rm -f "$link_name
     rm -f $link_name
     echo "ln -s ../"$advent_name" "$link_name

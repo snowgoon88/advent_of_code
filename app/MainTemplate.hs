@@ -8,7 +8,7 @@ module Main where
 -- import qualified MyParser as MP
 -- import MyParser ( GridMap, readGrid, chunks )
 -- import MyGrid (Pos, Size, DirVec, GridMapCore,
---                readGrid, addDir, isValidPos, chunks, getValMap, allDir)
+--                readGrid, addDir, isValidPos, chunks, showGrid, getValMap, allDir)
 -- import qualified MyCache as MC
 -- ****** MyUtils: countTrue, groupLines
 

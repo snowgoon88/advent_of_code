@@ -49,8 +49,8 @@ chunks n xs = ys ++ ('\n' : chunks n zs)
 -- *****************************************************************************
 -- showGrid : display a GridCore a
 -- *****************************************************************************
-showGrid :: Show a => GridMapCore a
-showGrid (size, gmap) = chunks (snd size) $ map (show . snd) (Map.toList gmap)
+showGrid :: GridMapCore Char -> String
+showGrid (size, gmap) = chunks (snd size) $ (Map.elems gmap)
 
 -- generate all DirVec pointing out of (0, 0)
 allDir :: [DirVec]
