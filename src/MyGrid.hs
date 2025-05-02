@@ -3,10 +3,23 @@ module MyGrid where
 -- import qualified MyGrid as MG
 
 import qualified Data.Map as Map
+import Linear (V2(..)) -- (*^) scalar product 2 ^* V2 1 2 |-> V2 2 4
 
 type Pos = (Int, Int)
 type Size = (Int, Int)
 type DirVec = (Int, Int)
+
+type Vec2 = V2 Int
+data DirC = N | W | S | E
+  deriving (Eq, Enum, Bounded, Show)
+-- MyUtils.csucc DirC is rotation to the Left
+-- MyUtils.cpred DirC is rotation to the Right
+
+dir2Vec :: DirC -> Vec2
+dir2Vec N = V2 0 1
+dir2Vec W = V2 (-1) 0
+dir2Vec S = V2 0 (-1)
+dir2Vec E = V2 1 0
 
 type PosMapCore a = Map.Map Pos a
 type GridMapCore a = (Size, PosMapCore a)
