@@ -28,5 +28,6 @@ cpred x | x == minBound = maxBound
         | otherwise     = pred x
 
 -- | Apply 'n' times a funtion
+-- example applyN (+ 2) 10 1 |-> 21
 applyN :: (a -> a) -> Int -> a -> a
 applyN f n = \item -> iterate f item !! n
