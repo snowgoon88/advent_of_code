@@ -35,6 +35,7 @@ advent20_10: sort sequence and compute combination under constraints (chain of a
 advent20_11: game of life with custom neighbors, smart with Map of neighbors, MyGrid
 advent20_12: move boat NESW and Forward, Right, Left. Linear.V2 and Circular Bounded Enum. (Smart uses a Semigroup of Direction to encode rotation of Directions)
 advent20_13: syncronize prime numbers on their modulo (bus lines). SMPART = fold over natureal search of the problem !
+advent20_14: exec prog with mask and set memory with value. Use List Monad to generate all address exhaustively. smart: uses the lense ifold' and ifoldM
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,
