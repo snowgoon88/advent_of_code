@@ -38,6 +38,7 @@ advent20_13: syncronize prime numbers on their modulo (bus lines). SMPART = fold
 advent20_14: exec prog with mask and set memory with value. Use List Monad to generate all address exhaustively. smart: uses the lense ifold' and ifoldM
 advent20_15: gen sequence while memorizing (Map) last occurence time. Smart: optimize speed.
 advent20_16: validate constraints intervales, determine valid rules (and, SMART, use monad list to search for constraintes like SEND + MORE + MONEY, see rambling)
+advent20_17: game of life in 3D and 4D (SMART use V3/V4 as monad and applicative to determine generic neighbors)
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,
