@@ -27,7 +27,8 @@ common shared-properties
         transformers ,
         time ,
         mtl ,
-        linear
+        linear ,
+        megaparsec
 
     other-modules:
         MyCache,

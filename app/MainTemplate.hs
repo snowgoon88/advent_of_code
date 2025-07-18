@@ -1,4 +1,5 @@
 {-# LANGUAGE TupleSections #-}
+{-# LANGUAGE OverloadedStrings #-}
 {-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
 {-# HLINT ignore "Use tuple-section" #-}
 module Main where
@@ -39,6 +40,10 @@ module Main where
 -- -- used as (1+2) `debug` "adding"'
 -- debug = flip trace
 
+-- import qualified Text.Megaparsec            as P
+-- import qualified Text.Megaparsec.Char       as P
+-- import qualified Text.Megaparsec.Char.Lexer as PP
+-- import Data.Void (Void)
 
 main :: IO ()
 main = do
