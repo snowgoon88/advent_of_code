@@ -16,6 +16,7 @@ module Main where
 -- ****** Data.String.Utils ** split, join, startswith, replace, endsWith
 -- import qualified Data.Map.Strict as Map
 -- ****** Data.Char: digitToInt, isDigit, isHexDigit, toLower
+-- import Text.Read (readMaybe)
 -- import qualified Data.Massiv.Array as A
 -- import Control.Monad ( fold )
 -- ****** Data.Maybe: fromJust, fromMaybe, catMaybes, isNothing, listToMaybe, mapMaybe
