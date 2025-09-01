@@ -42,6 +42,7 @@ advent20_17: game of life in 3D and 4D (SMART use V3/V4 as monad and applicative
 advent20_18: parser for +, * and () with changing priorities (SMART Megaparsec)
 advent20_19: parser for rules (AndOr), matching strings. (SMART -> recursive-scheme, hylomorphisme, anamorphisme, catamorphisme)
 advent20_20: create big_image by transforming and tiling smaller images, detect pattern. Tedious with "image" storing and manipulation. (SMART a Group+Monoid with Orientation)
+advent20_21: constrait satisfaction, (using StateT with [] Monad) over Alergen and Ingredient. List union and intersect. SMART: smaller and efficient writing.
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,
