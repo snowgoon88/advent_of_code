@@ -44,6 +44,7 @@ advent20_19: parser for rules (AndOr), matching strings. (SMART -> recursive-sch
 advent20_20: create big_image by transforming and tiling smaller images, detect pattern. Tedious with "image" storing and manipulation. (SMART a Group+Monoid with Orientation)
 advent20_21: constraint satisfaction, (using StateT with [] Monad) over Alergen and Ingredient. List union and intersect. SMART: smaller and efficient writing.
 advent20_22: recusive card battle game, with subgames. SMART: use Set instead of Map ?
+advent20_23: HUGE loop on displacing cups => Vector.Mutable with ST Monad !! TODO in rambling.
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,

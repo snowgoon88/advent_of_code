@@ -28,7 +28,8 @@ common shared-properties
         time ,
         mtl ,
         linear ,
-        megaparsec
+        megaparsec,
+        vector
 
     other-modules:
         MyCache,
