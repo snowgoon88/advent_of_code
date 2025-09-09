@@ -46,6 +46,7 @@ advent20_21: constraint satisfaction, (using StateT with [] Monad) over Alergen 
 advent20_22: recusive card battle game, with subgames. SMART: use Set instead of Map ?
 advent20_23: HUGE loop on displacing cups => Vector.Mutable with ST Monad !! TODO in rambling.
 advent20_24: follow path and cellular automata with Hex
+advent20_25: public/secret keys (discrete logarithm)
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,
