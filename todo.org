@@ -45,6 +45,7 @@ advent20_20: create big_image by transforming and tiling smaller images, detect 
 advent20_21: constraint satisfaction, (using StateT with [] Monad) over Alergen and Ingredient. List union and intersect. SMART: smaller and efficient writing.
 advent20_22: recusive card battle game, with subgames. SMART: use Set instead of Map ?
 advent20_23: HUGE loop on displacing cups => Vector.Mutable with ST Monad !! TODO in rambling.
+advent20_24: follow path and cellular automata with Hex
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,
