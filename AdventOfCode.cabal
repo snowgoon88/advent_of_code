@@ -56,6 +56,12 @@ executable Advent23
     import: shared-properties
     main-is:          Main.hs
 
+executable Advent21
+    import:           warnings ,
+                      shared-properties
+
+    main-is:          Main21.hs
+
 executable Advent20
     import:           warnings ,
                       shared-properties

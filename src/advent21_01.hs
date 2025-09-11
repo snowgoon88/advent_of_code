@@ -12,6 +12,7 @@ module Main where
 --                readGrid, addDir, isValidPos, chunks, showGrid, getValMap, allDir)
 -- import qualified MyCache as MC
 -- ****** MyUtils: countTrue, groupLines
+import qualified MyUtils as MU
 
 -- ****** Data.String.Utils ** split, join, startswith, replace, endsWith
 -- import qualified Data.Map.Strict as Map
@@ -49,22 +50,38 @@ module Main where
 main :: IO ()
 main = do
   putStrLn "********************************************************************************"
-  putStrLn "** Advent 2021 - Day xx Part - & -                                          **"
+  putStrLn "** Advent 2021 - Day 01 Part - & -                                          **"
   putStrLn "********************************************************************************"
-  -- content <- readFile "Input21/inputxx.txt"
-  -- content <- readFile "Input21/testxx_1.txt"
+  content <- readFile "Input21/input01.txt"
+  -- content <- readFile "Input21/test01_1.txt"
 
-  -- putStrLn $ "Answer 1> " ++ show pRes
+  let pRes = MU.countTrue (>0) (diff $ parseLines (lines content))
+  putStrLn $ "Answer 1> " ++ show pRes
 
-  -- putStrLn $ "Answer 2> " ++ show cRes
+  let sList = sumWin (parseLines (lines content))
+  -- putStrLn $ "sList=" ++ show sList
+  let cRes = MU.countTrue (>0) (diff sList)
+  putStrLn $ "Answer 2> " ++ show cRes
 
   putStrLn "END"
 
 -- *****************************************************************************
 -- ********************************************************************** Part 1
 -- *****************************************************************************
+parseLines :: [String] -> [Int]
+parseLines lineList = map read lineList
+
+-- SMART: zipWith (<) is (drop 1 is)
+diff :: [Int] -> [Int]
+diff (n1:n2:ns) = (n2 - n1) : diff (n2:ns)
+diff [n2] = []
+
+
 
 -- *****************************************************************************
 -- ********************************************************************** Part 2
 -- *****************************************************************************
-
+sumWin :: [Int] -> [Int]
+sumWin is
+  | length is > 2 = sum (take 3 is) : sumWin (drop 1 is)
+  | otherwise = []
