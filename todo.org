@@ -51,6 +51,7 @@ advent20_25: public/secret keys (discrete logarithm)
 ** 2021
 advent21_01: diff list and sliding windows.
 advent21_02: add/combine forwrd/Up/down for submarine. SMART: can be written as a group (Monoid) operations.
+advent21_03: filter list of binary according to majority bit
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,
