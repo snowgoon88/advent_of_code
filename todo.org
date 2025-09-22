@@ -12,6 +12,30 @@ https://github.com/jimflood/aoc2023/blob/main/src/Day12.hs
 https://adventofcode.com/2023/day/13
 https://hoogle.haskell.org/
 * TODO Haskel plot 2D fig (lines, dots)
+* Links
+** gameof life, Comonad
+https://javran.github.io/posts/2014-04-13-comonad-and-conways-game-of-life.html
+https://javran.github.io/posts/2014-08-22-comonad-zipper-and-conways-game-of-life.html
+https://www.youtube.com/watch?v=OqfHIujOvnE
+https://ncatlab.org/nlab/files/Overton-ComonadsHaskell.pdf
+https://github.com/ChrisPenner/conway/blob/master/src/Conway.hs
+Control.Comonad
+** Old Pixel Game Engine (C++)
+https://github.com/OneLoneCoder/olcPixelGameEngine/wiki/Compiling-on-Linux
+** sending even more money
+https://blog.jle.im/entry/unique-sample-drawing-searches-with-list-and-statet
+https://www.schoolofhaskell.com/user/chowells79/even-more-money
+** Hierarchical Free Monads
+https://github.com/graninas/hierarchical-free-monads-the-most-developed-approach-in-haskell/blob/master/README.md
+** Control Monad Error
+https://hackage.haskell.org/package/mtl-2.2.1/docs/Control-Monad-Error.html
+** Recursive Schemes
+https://blog.jle.im/entry/tries-with-recursion-schemes.html
+** Hoogle
+Data.Sequence
+Linear.Matrix
+Data.Map
+Data.Vector
 * Solved cases
 ** 2015
 advent15_01: parenthesis like lisp go up, down. parse, zip
@@ -52,6 +76,9 @@ advent20_25: public/secret keys (discrete logarithm)
 advent21_01: diff list and sliding windows.
 advent21_02: add/combine forwrd/Up/down for submarine. SMART: can be written as a group (Monoid) operations.
 advent21_03: filter list of binary according to majority bit
+advent21_04: play bingo and determine win, last win. SMART: use IntSet (linear indices) rather than 2D Map. And "recursion schemes" of https://hackage.haskell.org/package/recursion-schemes-5.2.3
+advent21_05: look for overlap of discrete lines (Map.unionsWith)
+advent21_06: life and birth of Fish => Use Matrix=(Vector (Vector Int) product with Linear
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,
