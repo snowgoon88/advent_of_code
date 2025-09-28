@@ -29,7 +29,8 @@ common shared-properties
         mtl ,
         linear ,
         megaparsec,
-        vector
+        vector,
+        random
 
     other-modules:
         MyCache,
