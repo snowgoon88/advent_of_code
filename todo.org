@@ -80,7 +80,8 @@ advent21_04: play bingo and determine win, last win. SMART: use IntSet (linear i
 advent21_05: look for overlap of discrete lines (Map.unionsWith)
 advent21_06: life and birth of Fish => Use Matrix=(Vector (Vector Int) product with Linear
 advent21_07: minimize sum of arithmetic distance (fuel for submarine), quicksort but NO random pivot (some tries with Random)
-advent22_08: 7-segment display: find wiring mapping using constraints. (SMART: compute all possible permutations, using Finite and Finitari and permutations)
+advent21_08: 7-segment display: find wiring mapping using constraints. (SMART: compute all possible permutations, using Finite and Finitari and permutations)
+advent21_09: heightMap, bassin of attraction (fold neighbors on Map). (SMART: use function "maybe", derive Map pointing to lower neighbors. Cannot use recursive-scheme as Set cannot be made a SetFunctor, nor Map)
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,
