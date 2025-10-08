@@ -84,6 +84,7 @@ advent21_08: 7-segment display: find wiring mapping using constraints. (SMART: c
 advent21_09: heightMap, bassin of attraction (fold neighbors on Map). (SMART: use function "maybe", derive Map pointing to lower neighbors. Cannot use recursive-scheme as Set cannot be made a SetFunctor, nor Map)
 advent21_10: balancing close/open parenthesis, score
 advent21_11: propagate Flashes in 2D grid. (SMART: use unfoldr to generate infinite list, foldMap not really understood)
+advent21_12: find all Path in Graph. Use List Monad.
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,
