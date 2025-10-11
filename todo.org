@@ -85,6 +85,7 @@ advent21_09: heightMap, bassin of attraction (fold neighbors on Map). (SMART: us
 advent21_10: balancing close/open parenthesis, score
 advent21_11: propagate Flashes in 2D grid. (SMART: use unfoldr to generate infinite list, foldMap not really understood)
 advent21_12: find all Path in Graph. Use List Monad.
+advent21_13: "fold" 2D transparent paper, display grid (WARNING: increasing X first)
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,
