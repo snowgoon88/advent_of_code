@@ -30,13 +30,15 @@ common shared-properties
         linear ,
         megaparsec,
         vector,
-        random
+        random,
+        numeric-limits
 
     other-modules:
         MyCache,
         MyParser,
         MyGrid,
-        MyUtils
+        MyUtils,
+        MySearch
 
 -- executable AdventOfCode
 --     import:           warnings ,
@@ -72,3 +74,7 @@ executable Advent20
 executable Advent15
     import: shared-properties
     main-is:          Main15.hs
+
+executable TestSearch
+    import: shared-properties
+    main-is:          TestSearch.hs
