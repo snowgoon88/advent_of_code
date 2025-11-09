@@ -87,6 +87,7 @@ advent21_11: propagate Flashes in 2D grid. (SMART: use unfoldr to generate infin
 advent21_12: find all Path in Graph. Use List Monad.
 advent21_13: "fold" 2D transparent paper, display grid (WARNING: increasing X first)
 advent21_14: repeat insert character between two letters, polymerize.
+advent21_15: aStar among riskMap, or repeated riskMap
 
 ** 2023
 advent23_01: parser numbers as digit or letters ("nine") in lines,

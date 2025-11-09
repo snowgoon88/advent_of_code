@@ -29,7 +29,7 @@ aStar :: (RealFloat b, Foldable t, Ord a)
   -> (a -> b)         -- hDist
   -> (a -> t (b, a))  -- getNeighbors
   -> a                -- startNode
-  -> Maybe ([a], AstarMap a b)  -- Returns: Maybe( endNode, memory )
+  -> Maybe ([a], AstarMap a b)  -- Returns: Maybe( pathToGoal, memory )
 aStar isGoal hDist getNeighbors startNode = case bestSol of
   Nothing -> Nothing
   Just (endNode, finalMemory) -> Just ( aStarReconstructPath finalMemory [endNode]
