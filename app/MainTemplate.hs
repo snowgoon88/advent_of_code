@@ -21,6 +21,7 @@ module Main where
 -- import Control.Monad ( fold )
 -- ****** Data.Maybe: fromJust, fromMaybe, catMaybes, isNothing, listToMaybe, mapMaybe
 -- import Data.Maybe ( catMaybes, fromMaybe )
+-- ****** Data.Foldable ( foldl' )
 -- ****** Data.IntSet: fromList, toList, split
 -- import qualified Dat.IntSet as IS
 -- import qualified Data.Map as Map
