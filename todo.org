@@ -138,3 +138,7 @@ advent24_22: pseudo random generator, memoazing/caching results, looking for pat
 advent24_23: subgraph and maximum clique (fully connected subgraph), Map of Set => Bron-Kerbosh algo
 advent24_24: simulate AND, XOR and OR in graph of Gates, repare to get additioner (using Graphviz and list of digit defectueux)
 advent24_25 : locks and keys as 7x5 grid2D, fit by comparing columns.
+
+
+** 2025
+advent25_01: apply rotation (foldl') to dial, count zero or passing before zero
