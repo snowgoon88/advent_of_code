@@ -142,3 +142,4 @@ advent24_25 : locks and keys as 7x5 grid2D, fit by comparing columns.
 
 ** 2025
 advent25_01: apply rotation (foldl') to dial, count zero or passing before zero
+advent25_03: look for maximum sequence in list of numbers (bank of batteries, joltages)
