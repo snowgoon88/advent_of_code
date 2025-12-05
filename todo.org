@@ -145,3 +145,4 @@ advent25_01: apply rotation (foldl') to dial, count zero or passing before zero
 advent25_02: find periods in number, between ranges
 advent25_03: look for maximum sequence in list of numbers (bank of batteries, joltages)
 advent25_04: map of neighbors to do some erosion (kind of game of life)
+advent25_05: combine intervales and count nb inside
