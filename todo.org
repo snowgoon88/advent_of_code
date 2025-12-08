@@ -148,3 +148,4 @@ advent25_04: map of neighbors to do some erosion (kind of game of life)
 advent25_05: combine intervales and count nb inside
 advent25_06: add/mult nbs vertically or horizontaly in a 2DGrid
 advent25_07: split beams, dynamic programming ?
+advent25_08: make graph by connecting closest nodes
