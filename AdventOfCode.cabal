@@ -31,7 +31,8 @@ common shared-properties
         megaparsec,
         vector,
         random,
-        numeric-limits
+        numeric-limits,
+        hmatrix
 
     other-modules:
         MyCache,
