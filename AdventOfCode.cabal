@@ -19,7 +19,8 @@ common warnings
 common shared-properties
     hs-source-dirs:   app, src
     default-language: Haskell2010
-    build-depends:    base ,
+    build-depends:
+        base ,
         MissingH ,
         extra,
         containers ,
