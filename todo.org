@@ -152,3 +152,4 @@ advent25_08: make graph by connecting closest nodes, sort descending order.
 advent25_09: rect inside a Vert/hori perimeter
 advent25_10: shortest path to light panel, integer linear programming then... TODO
 advent25_11: count paths in graph => SMART traverse, evalState, recursive structure. TODO FlexibleContext
+advent25_12: fits shapes on grid, but in fact just naively compare places and occupancy
