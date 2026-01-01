@@ -11,6 +11,7 @@ module Main where
 -- import MyGrid (Pos, Size, DirVec, GridMapCore,
 --                readGrid, addDir, isValidPos, chunks, showGrid, getValMap, allDir)
 -- import qualified MyCache as MC
+-- import qualified MySolver as MS
 -- ****** MyUtils: countTrue, groupLines
 
 -- ****** Data.String.Utils ** split, join, startswith, replace, endsWith
@@ -21,17 +22,19 @@ module Main where
 -- import Control.Monad ( fold )
 -- ****** Data.Maybe: fromJust, fromMaybe, catMaybes, isNothing, listToMaybe, mapMaybe
 -- import Data.Maybe ( catMaybes, fromMaybe )
--- ****** Data.Foldable ( foldl' )
+-- ****** Data.Foldable ( foldl', foldlM )
 -- ****** Data.IntSet: fromList, toList, split
 -- import qualified Dat.IntSet as IS
 -- import qualified Data.Map as Map
 -- import qualified Data.Set as Set
+-- import qualified Data.Vector as V
 -- import qualified Linear.V2 as LV
 -- ****** Data.List: find, sortOn, groupBy, sort, group, delete, (\\), foldl', elemIndex
+--                   intercalate, transpose, partition
 -- ****** Data.List.Extra: splitOn
 -- import Data.Time.Clock.POSIX ( getPOSIXTime )
 -- import Data.Char ( ord )
--- import Debug.Trace ( trace )
+-- import Debug.Trace ( trace, traceM )
 -- import Numeric ( readHex )
 -- import qualified Control.Monad.Trans.State as St
 -- import qualified Data.Bits as Bits
