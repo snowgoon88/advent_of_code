@@ -3,7 +3,7 @@ module MySolver ( RatNum, invert, niceRat
                 , getCol, tabMat, swapRow, mulRow, addMulRow
                 , gaussElimM, reduceMatrix
                 , niceConstraint, niceSystem
-                , test01) where
+                , test01, stepGaussElimMDebug, gaussElimMDebug) where
 
 {-
 Usage example (see also TestSolver.hs)
@@ -27,6 +27,7 @@ testGE mat = do
 import Data.List ( intercalate )
 import qualified Data.Vector as V
 import Data.Ratio
+import Debug.Trace ( traceM )
 
 -- *****************************************************************************
 -- Rational Number are made of Integer numerator and denominator
@@ -100,6 +101,17 @@ gaussElimM mat idxStart
         Right newMat               -> gaussElimM newMat (idxStart+1)
         Left err_msg               -> Left err_msg
 
+gaussElimMDebug :: VMat -> Int -> Either String VMat
+gaussElimMDebug mat idxStart
+  | idxStart > length mat = Right mat
+  | otherwise = do
+      traceM $ "** step with idxStart=" ++ show idxStart
+      let res = stepGaussElimMDebug mat idxStart
+      case res of
+        Left "no_nonzeros_columns" -> Right mat
+        Right newMat               -> gaussElimMDebug newMat (idxStart+1)
+        Left err_msg               -> Left err_msg
+
 -- find a non-zero subcolumn, starting at row 'idxStart'
 -- => Either Left "no_zeros" | Right (idxNZCol, nzSubCol)
 findNZcolumn :: VMat -> Int -> Either String (Int, VCol)
@@ -136,8 +148,9 @@ setToOne mat idxStart idNZCol = oneFirst
 elim :: VMat -> Int -> Int -> Either String VMat
 elim mat idxStart idNZCol = Right $ V.imap opElim mat
   where
+    -- mat[i,:] <- mat[i,:] - 1/mat[i,idNZCol] * mat[idxStart,:]
     opElim i row
-      | i > idxStart = V.zipWith (\v1 v2 -> v2 * n + v1) row (mat V.! idNZCol)
+      | i > idxStart = V.zipWith (\v1 v2 -> v2 * n + v1) row (mat V.! idxStart)
       | otherwise = row
       where
         n = - ((mat V.! i) V.! idNZCol)
@@ -150,26 +163,17 @@ stepGaussElimM mat idStart = do
   elim onedMat idStart idNZ
 
 -- debug version of stepGaussElim
-stepGaussElimMDebug mat idStart
-  | idStart >= length mat = print "error_idStart_too_large"
-  | otherwise = do
-      let nz = findNZcolumn mat idStart
-      putStrLn $ "(idNZCol, nzSubCol)=" ++ show nz
-      case nz of
-        Left msg -> print "--> STOP Here"
-        Right (idNZCol, nzSubCol) -> do
-          let swappedMat = swapToNonZero mat idStart (idNZCol, nzSubCol)
-          putStrLn $ "swapped=" ++ show swappedMat
-          case swappedMat of
-            Left msg -> print "--> STOP Here"
-            Right smat -> do
-              let onedMat = setToOne smat idStart idNZCol
-              putStrLn $ "oned=" ++ show onedMat
-              case onedMat of
-                Left msg -> print "--> STOP Here"
-                Right omat -> do
-                  let res = elim omat idStart idNZCol
-                  putStrLn $ "elim=" ++ show res
+stepGaussElimMDebug :: VMat -> Int -> Either String VMat
+stepGaussElimMDebug mat idStart = do
+      (idNZ, colNZ) <- findNZcolumn mat idStart
+      traceM $ "(idNZCol, nzSubCol)=" ++ show (idNZ, colNZ)
+      swappedMat <- swapToNonZero mat idStart (idNZ, colNZ)
+      traceM $ "__swapped\n" ++ tabMat swappedMat
+      onedMat <- setToOne swappedMat idStart idNZ
+      traceM $ "__ oned\n" ++ tabMat onedMat
+      res <- elim onedMat idStart idNZ
+      traceM $ "elim=" ++ show res
+      return res
 
 -- *****************************************************************************
 -- Reducing a row echelon form
@@ -224,8 +228,9 @@ test01 = do
   let mat = mkMat [[1, 1, 1], [0, 0, 0]]
   putStrLn $ niceSystem mat
   putStrLn $ "__stepGaussElim mat 1 SHOULD say 'no_nonzero_columns'"
-  stepGaussElimMDebug mat 1
+  let err1 = stepGaussElimMDebug mat 1
   putStrLn $ "__swapToNonZero mat 1 (1, subCol) SHOULD say 'error'"
   print (swapToNonZero mat 1 (1, V.slice 1 1 (getCol mat 1)))
   putStrLn $ "__setToOne mat 1 1 SHOULD say 'error'"
   print (setToOne mat 1 1)
+

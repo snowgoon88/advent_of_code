@@ -1,5 +1,5 @@
 
-module TestSolver where
+module Main where
 
 {- testing and demo of the MySolver module.
 
@@ -40,3 +40,14 @@ testGE mat = do
       let red = MS.reduceMatrix geMat
       putStrLn $ MS.tabMat red
 
+
+-- from https://en.wikipedia.org/wiki/Gaussian_elimination
+sysGE = MS.mkMat [[2, 1, -1, 8], [-3, -1, 2, -11], [-2, 1, 2, -3]]
+sysAoC2510_74 = MS.mkMat [ [0 ,  0 ,  1 ,  0 ,  0 ,  0 ,  1 ,  1 ,  1 , 28]
+                         , [0 ,  0 ,  1 ,  1 ,  1 ,  1 ,  0 ,  0 ,  0 , 44]
+                         , [1 ,  0 ,  0 ,  1 ,  1 ,  0 ,  0 ,  0 ,  0 , 38]
+                         , [1 ,  0 ,  1 ,  1 ,  1 ,  0 ,  1 ,  0 ,  0 , 55]
+                         , [0 ,  0 ,  1 ,  0 ,  0 ,  0 ,  1 ,  0 ,  1 , 20]
+                         , [0 ,  1 ,  0 ,  0 ,  1 ,  0 ,  1 ,  0 ,  0 , 41]
+                         , [1 ,  1 ,  0 ,  0 ,  1 ,  1 ,  1 ,  1 ,  1 , 67]
+                         ]
